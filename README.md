@@ -4,15 +4,15 @@ This provider makes it possible to access [dwd's geoserver-WFS endpoints](http:/
 Because the geoserver already serves geojsons as an output, there is not that much magic about the internal procedure.
 
 ### Installation
-Perform the following steps to install the dwd-koop provider. Install [koop](https://github.com/Esri/koop) including its dependencies. 
-Clone the repo
-`git clone git@github.com:Esri/koop.git`
-Enter the koop project directory
-`cd koop`
-Install koop-server and node.js dependencies
-`npm install`
-Install koop-dwd provider via
-`npm install https://github.com/schlomm/koop-dwd/tarball/master`
+Perform the following steps to install the dwd-koop provider. Install [koop](https://github.com/Esri/koop) including its dependencies.  
+Clone the repo  
+`git clone git@github.com:Esri/koop.git`  
+Enter the koop project directory  
+`cd koop`  
+Install koop-server and node.js dependencies  
+`npm install`  
+Install koop-dwd provider via  
+`npm install https://github.com/schlomm/koop-dwd/tarball/master`  
 
 
 ### Quick Go-Through
