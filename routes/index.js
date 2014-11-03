@@ -3,7 +3,8 @@
 
 module.exports = {
   // route : handler
-  'get /dwd/:id': 'get',
-  'get /dwd/:id/FeatureServer': 'featureserver',
-  'get /dwd/:id/preview': 'preview'
+  //'get /dwd/:id/FeatureServer': 'featureserver',
+  //'get /dwd/:id/preview': 'preview'
+  'get /dwd/:id': 'get'
+
 }
