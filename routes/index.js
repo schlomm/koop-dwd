@@ -3,7 +3,7 @@
 
 module.exports = {
   // route : handler
-  'get /dwd/:id': 'get'
-  'get /dwd/:id/FeatureServer': 'featureserver'
+  'get /dwd/:id': 'get',
+  'get /dwd/:id/FeatureServer': 'featureserver',
   'get /dwd/:id/preview': 'preview'
 }
