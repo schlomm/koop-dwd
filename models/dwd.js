@@ -3,10 +3,10 @@ var request = require('request'),
 
 var dwd = function( koop ){
 
-  var wfs = {};
-  wfs.__proto__ = BaseModel( koop );
+  var dwd = {};
+  dwd.__proto__ = BaseModel( koop );
 
-  wfs.find = function( id, options, callback ){
+  dwd.find = function( id, options, callback ){
 
     var type = 'dwd';
 
