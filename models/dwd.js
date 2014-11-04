@@ -33,6 +33,21 @@ var dwd = function( koop ){
     });
   };
 
+
+    // drops the item from the cache
+  dwd.dropItem = function( host, itemId, options, callback ){
+    var dir = [ 'dwd', itemId].join(':');
+    koop.Cache.remove('dwd:', itemId, options, function(err, res){
+      koop.files.removeDir( 'files/' + dir, function(err, res){
+        koop.files.removeDir( 'tiles/'+ dir, function(err, res){
+          koop.files.removeDir( 'thumbs/'+ dir, function(err, res){
+            callback(err, true);
+          });
+        });
+      });
+    });
+  };
+
   return dwd;
 
 };

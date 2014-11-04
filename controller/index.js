@@ -22,6 +22,26 @@ var Controller = function( dwd ){
     });
   };
 
+
+  // drops the cache for an item
+  controller.drop = function(req, res){
+    geoserver.find(req.params.id, function(err, data){
+      if (err) {
+        res.send( err, 500);
+      } else {
+        // Get the item 
+        geoserver.dropItem( req.params.item, req.query, function(error, itemJson){
+          if (error) {
+            res.send( error, 500);
+          } else {
+            res.json( itemJson );
+          }
+        });
+      }
+    });
+  };
+
+
   // use the shared code in the BaseController to create a feature service
   controller.featureserver = function(req, res){
     var callback = req.query.callback, self = this;
