@@ -20,17 +20,17 @@ Checking the `.js` in the models-directory, you'll notice the dwd geoserver URL.
 
 By replacing the `id` with the name of a service, you can access the different dataitems. Those need the  "OpenLayers KML GML"- description as common format.  Check [DWD's Geoserver Layer Preview](http://maps.dwd.de/geoserver/web/?wicket:bookmarkablePage=:org.geoserver.web.demo.MapPreviewPage) for available services.
 
-If you want to access and process a DWD layer via koop and this [koop-dwd provider](https://github.com/schlomm/koop-dwd), follow this URL schema: 
+If you want to access and process a DWD layer via koop and this [koop-dwd provider](https://github.com/schlomm/koop-dwd), follow this URL schema, where `id` is the LayerID of a DWD Layer.
 
- - Raw GeoJSON: /dwd/<id>
- - FeatureService: /dwd/<id>/FeatureServer/0 
- - Query:  /dwd/<id>/0/query
+ - Raw GeoJSON: /dwd/id
+ - FeatureService: /dwd/id/FeatureServer/0 
+ - Query:  /dwd/id/0/query
 
 Example request for [DWD's Basiswarnungen](http://maps.dwd.de/geoserver/dwd/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=dwd:BASISWARNUNGEN&maxFeatures=50&outputFormat=application/json):
 
- - Raw GeoJSON: <your_server:port>/dwd/dwd:BASISWARNUNGEN 
- - FeatureService: <your_server:port>/dwd/dwd:BASISWARNUNGEN/FeatureServer/0 
- - Query:  <your_server:port>/dwd/dwd:BASISWARNUNGEN/0/query
+ - Raw GeoJSON: your_server:port/dwd/dwd:BASISWARNUNGEN 
+ - FeatureService: your_server:port/dwd/dwd:BASISWARNUNGEN/FeatureServer/0 
+ - Query:  your_server:port/dwd/dwd:BASISWARNUNGEN/0/query
 
 ### Outlook
 A timer will be needed, which checks and compares the cached and requested data. If they differ, the old cached data will be deleted and the updated data cached to the database.
